@@ -76,7 +76,7 @@ int main() {
     rotate(0.0704, cosA, sinA); // tan(0.0704)
     rotate(0.0352, cosB, sinB); // tan(0.0352)
     // 画面每一帧之间的间隔
-    usleep(15000);
+    usleep(30000);
   }
   return 0;
 }
