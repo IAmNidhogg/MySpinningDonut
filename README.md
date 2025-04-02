@@ -26,7 +26,7 @@ https://youtu.be/sW9npZVpiMI?si=SCTS3gHpac2LqNwQ
 
 作出示意图如下图所示：
 
-![image.png](My%20Spinning%20Donut%201baa5355d9308143bacbc917ff85183f/image.png)
+![image.png](Picture/image.png)
 
 设向量$A = (x, y, z)$的模为$|A|$，其与z轴正半轴的夹角为$\alpha$，那么我们可以分别将$x, y, z$表示为：
 
@@ -90,7 +90,7 @@ $$
 
 首先如下图所示在二维平面上画一个圆：
 
-![image.png](My%20Spinning%20Donut%201baa5355d9308143bacbc917ff85183f/image%201.png)
+![image.png](Picture/image%201.png)
 
 我们用极坐标来表示圆上的点：
 
@@ -116,7 +116,7 @@ $$
 
 因为我们最终需要将立体的甜甜圈展示在屏幕上，而屏幕本身显示的是一个“二维”的图像，因此我们在得到甜甜圈的坐标后还需要将它们投射到2D屏幕上。作出示意图如下图所示：
 
-![image.png](My%20Spinning%20Donut%201baa5355d9308143bacbc917ff85183f/image%202.png)
+![image.png](Picture/image%202.png)
 
 可以看到，如果把人眼所在位置定位坐标原点，那么屏幕到眼睛的距离就是$z^{'}$，我们用参数$K_{1}$来表示。由正切$tan$相等有：
 
@@ -184,7 +184,7 @@ $$
 
 但是在多次旋转之后，我们得到的三角函数值将不能够满足以上条件。直观来说，随着旋转的进行，会出现如下图所示的情况：（将尺度放大）
 
-![image.png](My%20Spinning%20Donut%201baa5355d9308143bacbc917ff85183f/image%203.png)
+![image.png](Picture/image%203.png)
 
 如图a所示，随着旋转，直观体现是向量模长会变短，如果只看点的话，就会出现图b所示的情况。因此我们需要在一定程度上修正这样的误差。
 
@@ -250,5 +250,3 @@ $$
 # 实现
 
 接下来，我们就可以按照理论分析，将这一切写成代码，在屏幕上绘制出甜甜圈来了！
-
-
