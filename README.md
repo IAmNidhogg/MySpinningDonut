@@ -28,7 +28,7 @@ https://youtu.be/sW9npZVpiMI?si=SCTS3gHpac2LqNwQ
 
 ![image.png](Picture/image.png)
 
-设向量$A = (x, y, z)$的模为$|A|$，其与z轴正半轴的夹角为$\alpha$，那么我们可以分别将$x, y, z$表示为：
+设向量$A = (x, y, z)$的模为$\|A\|$，其与z轴正半轴的夹角为$\alpha$，那么我们可以分别将$x, y, z$表示为：
 
 $$
 \left\\{\begin{matrix}x = |A|\cdot \sin \alpha \\\\ y = c (Constant) \\\\ z = |A|\cdot \cos \alpha 
@@ -45,8 +45,8 @@ $$
 利用和差角公式：
 
 $$
-\left\{\begin{matrix}
-\sin(\alpha + \beta) = \sin\alpha \cdot\cos\beta+\cos\alpha\cdot\sin\beta\\ \cos(\alpha+\beta)=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta
+\left\\{\begin{matrix}
+\sin(\alpha + \beta) = \sin\alpha \cdot\cos\beta+\cos\alpha\cdot\sin\beta\\\\ \cos(\alpha+\beta)=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta
 
 \end{matrix}\right.
 $$
@@ -54,7 +54,7 @@ $$
 可以得到如下结果：
 
 $$
-\left\{\begin{matrix}x^{'} = |A|\sin \alpha\cos\beta+|A|\cos\alpha\sin\beta = x\cos\beta + z\sin\beta \\ z^{'} = |A|\cos\alpha\cos\beta-|A|\sin\alpha\sin\beta=z\cos\beta-x\sin\beta
+\left\\{\begin{matrix}x^{'} = |A|\sin \alpha\cos\beta+|A|\cos\alpha\sin\beta = x\cos\beta + z\sin\beta \\\\ z^{'} = |A|\cos\alpha\cos\beta-|A|\sin\alpha\sin\beta=z\cos\beta-x\sin\beta
 
 \end{matrix}\right.
 $$
@@ -62,25 +62,25 @@ $$
 我们将这个结果写成矩阵的形式：
 
 $$
-\begin{pmatrix}x^{'} \\y^{'} \\z^{'}\end{pmatrix} = \begin{pmatrix}\cos\beta  &0  &\sin\beta \\0  &1  &0 \\-\sin\beta  &0  &\cos\beta \end{pmatrix} \begin{pmatrix} x\\ y\\z
+\begin{pmatrix}x^{'} \\\\y^{'} \\\\z^{'}\end{pmatrix} = \begin{pmatrix}\cos\beta  &0  &\sin\beta \\\\0  &1  &0 \\\\-\sin\beta  &0  &\cos\beta \end{pmatrix} \begin{pmatrix} x\\\\ y\\\\z
 \end{pmatrix}
 $$
 
 由此我们得到了绕$y$轴旋转角度$\beta$的旋转矩阵，并将其命名为$M_{y}(\beta)$，同理我们还可以分别得到绕$x$轴和$z$轴旋转角度$\beta$的旋转矩阵：
 
 $$
-M_{x}(\beta)=\begin{pmatrix}1  &0  &0 \\0  &\cos\beta  &-\sin\beta \\0  &\sin\beta  &\cos\beta \end{pmatrix} 
+M_{x}(\beta)=\begin{pmatrix}1  &0  &0 \\\\0  &\cos\beta  &-\sin\beta \\\\0  &\sin\beta  &\cos\beta \end{pmatrix} 
 $$
 
 $$
-M_{z}(\beta)=\begin{pmatrix}\cos\beta  &-\sin\beta  &0 \\\sin\beta  &\cos\beta  &0 \\0  &0  &1 \end{pmatrix} 
+M_{z}(\beta)=\begin{pmatrix}\cos\beta  &-\sin\beta  &0 \\\\\sin\beta  &\cos\beta  &0 \\\\0  &0  &1 \end{pmatrix} 
 $$
 
 最后，如果我们让任意向量$(x, y, z)$同时分别绕$x$轴、$y$轴和$z$轴旋转角度$A$、$\phi$和$B$，那么旋转后的向量坐标为：
 
 $$
-\begin{pmatrix} x^{'}\\ y^{'}\\z^{'}
-\end{pmatrix}=M_{z}(B)\cdot M_{x}(A)\cdot M_{y}(\phi )\begin{pmatrix} x\\ y\\z
+\begin{pmatrix} x^{'}\\\\ y^{'}\\\\z^{'}
+\end{pmatrix}=M_{z}(B)\cdot M_{x}(A)\cdot M_{y}(\phi )\begin{pmatrix} x\\\\ y\\\\z
 \end{pmatrix}
 $$
 
@@ -95,7 +95,7 @@ $$
 我们用极坐标来表示圆上的点：
 
 $$
-\left\{\begin{matrix}x = R_{2}+R_{1}\cos\theta  \\y=R_{1}\sin\theta \\z=0\end{matrix}\right.
+\left\\{\begin{matrix}x = R_{2}+R_{1}\cos\theta  \\\\y=R_{1}\sin\theta \\\\z=0\end{matrix}\right.
 $$
 
 接下来我们让这个圆绕y轴旋转一周，就能够得到一个完整的立体的甜甜圈上所有的点坐标。
@@ -105,8 +105,8 @@ $$
 根据之前的旋转原理，可以轻易由圆上的点坐标得到甜甜圈的点坐标。因为最终我们要让甜甜圈在三个坐标轴上都有旋转，这里我们能够直接表示出最终的所有点坐标：
 
 $$
-\begin{pmatrix} x^{'}\\ y^{'}\\z^{'}
-\end{pmatrix}=M_{z}(B)\cdot M_{x}(A)\cdot M_{y}(\phi )\begin{pmatrix} R_{2}+R_{1}\cos\theta\\ R_{1}\sin\theta\\0
+\begin{pmatrix} x^{'}\\\\ y^{'}\\\\z^{'}
+\end{pmatrix}=M_{z}(B)\cdot M_{x}(A)\cdot M_{y}(\phi )\begin{pmatrix} R_{2}+R_{1}\cos\theta\\\\ R_{1}\sin\theta\\\\0
 \end{pmatrix}
 $$
 
@@ -147,8 +147,8 @@ $$
 接下来我们需要得到甜甜圈上每个点的法线方向。此时会议之前构造甜甜圈的过程，我们其实可以直接在以原点为中心的单位圆上先作出每个点的法线，它们是与画甜甜圈的初始圆圈上的法线方向一致的，然后将它们按照相同的方式旋转，就能够得到所有点的法线方向了！我们用$(N_x,N_y,N_z)$表示法线：
 
 $$
-\begin{pmatrix} N_x\\ N_y\\N_z
-\end{pmatrix}=M_{z}(B)\cdot M_{x}(A)\cdot M_{y}(\phi )\begin{pmatrix} \cos\theta\\\sin\theta\\0
+\begin{pmatrix} N_x\\\\ N_y\\\\N_z
+\end{pmatrix}=M_{z}(B)\cdot M_{x}(A)\cdot M_{y}(\phi )\begin{pmatrix} \cos\theta\\\\\sin\theta\\\\0
 \end{pmatrix}
 $$
 
@@ -169,7 +169,7 @@ $$
 不难发现，在绘制圆形时，我们需要在多层循环下多次计算$\sin$和$\cos$函数，这不是很高效，因此我们同样可以借助旋转矩阵来完成。不过这里借助的是二维的旋转矩阵：
 
 $$
-\begin{pmatrix} \cos^{'}\\\sin^{'}\end{pmatrix}=\begin{pmatrix}\cos\theta   &-\sin\theta  \\\sin\theta   &\cos\theta \end{pmatrix}\begin{pmatrix}\cos \\\sin \end{pmatrix}
+\begin{pmatrix} \cos^{'}\\\\\sin^{'}\end{pmatrix}=\begin{pmatrix}\cos\theta   &-\sin\theta  \\\\\sin\theta   &\cos\theta \end{pmatrix}\begin{pmatrix}\cos \\\\\sin \end{pmatrix}
 $$
 
 这样当我们选定步长$(\theta)$之后，就可以在旋转的过程中得到每一个角度的三角函数值，这样做最直观的好处就是只需要计算一次$\cos$和$\sin$的值，之后只需要做乘法即可。
@@ -191,7 +191,7 @@ $$
 首先能够想到的最简单的修正即：
 
 $$
-\left\{\begin{matrix}\cos = \frac{\cos}{\sqrt{\cos^2 + \sin^2}}  \\\sin=\frac{\sin}{\sqrt{\cos^2+\sin^2}}
+\left\\{\begin{matrix}\cos = \frac{\cos}{\sqrt{\cos^2 + \sin^2}}  \\\\\sin=\frac{\sin}{\sqrt{\cos^2+\sin^2}}
 \end{matrix}\right.
 $$
 
@@ -224,13 +224,13 @@ $$
 所以我们计算三角函数值的公式修正为：
 
 $$
-\begin{pmatrix} \cos^{'}\\\sin^{'}\end{pmatrix}=K_{corect}\begin{pmatrix}\cos\theta   &-\sin\theta  \\\sin\theta   &\cos\theta \end{pmatrix}\begin{pmatrix}\cos \\\sin \end{pmatrix}
+\begin{pmatrix} \cos^{'}\\\\\sin^{'}\end{pmatrix}=K_{corect}\begin{pmatrix}\cos\theta   &-\sin\theta  \\\\\sin\theta   &\cos\theta \end{pmatrix}\begin{pmatrix}\cos \\\\\sin \end{pmatrix}
 $$
 
 进一步做一些调整有：
 
 $$
-\begin{pmatrix} \cos^{'}\\\sin^{'}\end{pmatrix}=K_{correct}\cos\theta\begin{pmatrix}1   &-\tan\theta  \\\tan\theta   &1 \end{pmatrix}\begin{pmatrix}\cos \\\sin \end{pmatrix}
+\begin{pmatrix} \cos^{'}\\\\\sin^{'}\end{pmatrix}=K_{correct}\cos\theta\begin{pmatrix}1   &-\tan\theta  \\\\\tan\theta   &1 \end{pmatrix}\begin{pmatrix}\cos \\\\\sin \end{pmatrix}
 $$
 
 然后再让：
@@ -242,7 +242,7 @@ $$
 这样就有：
 
 $$
-\begin{pmatrix} \cos^{'}\\\sin^{'}\end{pmatrix}=K_{correct}\begin{pmatrix}1   &-\tan\theta  \\\tan\theta   &1 \end{pmatrix}\begin{pmatrix}\cos \\\sin \end{pmatrix}
+\begin{pmatrix} \cos^{'}\\\\\sin^{'}\end{pmatrix}=K_{correct}\begin{pmatrix}1   &-\tan\theta  \\\\\tan\theta   &1 \end{pmatrix}\begin{pmatrix}\cos \\\\\sin \end{pmatrix}
 $$
 
 这样旋转矩阵里只需要提前计算$\tan\theta$，还能够进一步减少产生的误差。
