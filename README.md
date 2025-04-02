@@ -28,7 +28,7 @@ https://youtu.be/sW9npZVpiMI?si=SCTS3gHpac2LqNwQ
 
 ![image.png](Picture/image.png)
 
-设向量$A = (x, y, z)$的模为$\|A\|$，其与z轴正半轴的夹角为$\alpha$，那么我们可以分别将$x, y, z$表示为：
+设向量$A = (x, y, z)$的模为$|A|$，其与z轴正半轴的夹角为$\alpha$，那么我们可以分别将$x, y, z$表示为：
 
 $$
 \left\\{\begin{matrix}x = |A|\cdot \sin \alpha \\\\ y = c (Constant) \\\\ z = |A|\cdot \cos \alpha 
@@ -38,7 +38,7 @@ $$
 将向量$A$绕$y$轴旋转角度$\beta$，得到向量$A^{'} = (x^{'}, y^{'}, z^{'})$，其模为$|A^{'}|$，同样将其表示为：
 
 $$
-\left\{\begin{matrix}x^{'} = |A|\cdot \sin (\alpha + \beta) \\ y^{'} = c (Constant) \\z^{'} = |A|\cdot \cos (\alpha + \beta) 
+\left\\{\begin{matrix}x^{'} = |A|\cdot \sin (\alpha + \beta) \\\\ y^{'} = c (Constant) \\\\z^{'} = |A|\cdot \cos (\alpha + \beta) 
 \end{matrix}\right.
 $$
 
