@@ -31,7 +31,7 @@ https://youtu.be/sW9npZVpiMI?si=SCTS3gHpac2LqNwQ
 设向量$A = (x, y, z)$的模为$|A|$，其与z轴正半轴的夹角为$\alpha$，那么我们可以分别将$x, y, z$表示为：
 
 $$
-\left\lbrace\begin{matrix}x = |A|\cdot \sin \alpha \\ y = c (Constant) \\z = |A|\cdot \cos \alpha 
+\left\lbrace\begin{matrix}x = |A|\cdot \sin \alpha \\ y = c (Constant) \\ z = |A|\cdot \cos \alpha 
 \end{matrix}\right.
 $$
 
