@@ -45,7 +45,7 @@ $$
 利用和差角公式：
 
 $$
-\left\{\begin{matrix}
+\left\\{\begin{matrix}
 \sin(\alpha + \beta) = \sin\alpha \cdot\cos\beta+\cos\alpha\cdot\sin\beta\\\\ \cos(\alpha+\beta)=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta
 
 \end{matrix}\right.
@@ -54,7 +54,7 @@ $$
 可以得到如下结果：
 
 $$
-\left\{\begin{matrix}x^{'} = |A|\sin \alpha\cos\beta+|A|\cos\alpha\sin\beta = x\cos\beta + z\sin\beta \\\\ z^{'} = |A|\cos\alpha\cos\beta-|A|\sin\alpha\sin\beta=z\cos\beta-x\sin\beta
+\left\\{\begin{matrix}x^{'} = |A|\sin \alpha\cos\beta+|A|\cos\alpha\sin\beta = x\cos\beta + z\sin\beta \\\\ z^{'} = |A|\cos\alpha\cos\beta-|A|\sin\alpha\sin\beta=z\cos\beta-x\sin\beta
 
 \end{matrix}\right.
 $$
